@@ -6,60 +6,95 @@
   <title>ChatPlus Privacy Policy</title>
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #eaeaea;
-      line-height: 1.6;
+    /* Base */
+    * {
+      box-sizing: border-box;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #ffffff;
+      background: linear-gradient(135deg, #5b2cff, #1e7bff);
+      overflow-x: hidden;
+    }
+
+    /* Particle canvas */
+    canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Container */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 80px auto;
+      padding: 48px;
+      border-radius: 24px;
+
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      margin-top: 40px;
-      font-size: 22px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      padding-bottom: 6px;
-    }
-
-    p {
-      margin: 14px 0;
-      color: #d0d0d0;
+      font-size: 34px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
     }
 
     .date {
       font-size: 14px;
-      color: #aaaaaa;
-      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 42px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 10px 0;
     }
 
     a {
-      color: #8ab4f8;
-      text-decoration: none;
+      color: #ffffff;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.5);
     }
 
-    a:hover {
-      text-decoration: underline;
+    @media (max-width: 768px) {
+      .wrapper {
+        margin: 40px 16px;
+        padding: 32px 24px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+
+  <!-- Particle Background -->
+  <canvas id="particles"></canvas>
+
+  <div class="wrapper">
     <h1>Privacy Policy</h1>
     <div class="date">Effective Date: 24-12-2025</div>
 
@@ -73,14 +108,12 @@
     </p>
 
     <h2>Information You Choose to Provide</h2>
-    <p>To deliver app features, ChatPlus processes content that you submit, including:</p>
     <p>
-      Text input: Messages and prompts you send to the AI.<br />
-      Files and images: Documents or images you upload for analysis.<br />
-      Voice input: Audio used to convert speech into text.
+      To deliver app features, ChatPlus processes content that you submit, including:
+      text input, files and images uploaded for analysis, and voice input used to convert speech into text.
     </p>
     <p>
-      This information is used only to perform the actions you request. It is not used for advertising, marketing, or profiling.
+      This information is used only to perform the actions you request and is not used for advertising, marketing, or profiling.
     </p>
 
     <h2>AI Processing and Third-Party Services</h2>
@@ -88,93 +121,117 @@
       To generate responses, ChatPlus securely transmits user-submitted content to trusted third-party AI service providers via encrypted connections.
     </p>
     <p>
-      ChatPlus does not use your content to train AI models. Third-party service providers process content only to generate responses and provide requested functionality.
+      ChatPlus does not use your content to train AI models. Third-party providers process content only to generate responses and provide requested functionality.
     </p>
     <p>
-      While ChatPlus does not store your content on its own servers, third-party providers may retain submitted data for a short, limited period solely to ensure service safety and identify platform abuse, in accordance with their security requirements.
+      While ChatPlus does not store your content on its own servers, third-party providers may retain submitted data for a short, limited period to ensure service safety and prevent abuse.
     </p>
 
     <h2>Data Storage and Retention</h2>
     <p>
-      We follow a privacy-first, minimal-retention approach.
-    </p>
-    <p>
-      Chat history is stored locally on your device. We do not host your conversations on our servers.
-    </p>
-    <p>
-      Uploaded images, files, and voice data are processed in temporary memory and are automatically deleted shortly after processing, typically within 60 seconds.
-    </p>
-    <p>
-      If you delete chats or remove the App, the data is removed from your device and cannot be recovered by ChatPlus.
+      Chat history is stored locally on your device. We do not host conversations on our servers.
+      Uploaded files and voice data are processed temporarily and deleted shortly after processing, typically within 60 seconds.
     </p>
 
     <h2>Technical Diagnostics</h2>
     <p>
-      To keep the App stable, we collect limited technical diagnostics data, such as device type, operating system version, and crash information.
-    </p>
-    <p>
-      This data is not linked to your identity or your submitted content. We do not use third-party analytics trackers.
+      We collect limited technical diagnostics such as device type, operating system version, and crash information.
+      This data is not linked to your identity and does not include user-submitted content.
     </p>
 
     <h2>Notifications</h2>
     <p>
       ChatPlus may send notifications related to app functionality, service updates, or subscription status.
-    </p>
-    <p>
-      Notifications are sent only if you grant permission through the iOS system-level consent prompt. You can enable or disable notifications at any time in your device settings.
-    </p>
-    <p>
-      We do not send advertising or promotional notifications.
+      Notifications are sent only with your permission and are never promotional.
     </p>
 
     <h2>Payments and Subscriptions</h2>
     <p>
-      All purchases and subscriptions are processed by Apple through the App Store.
-    </p>
-    <p>
-      ChatPlus does not collect or store payment details. We receive only an anonymized confirmation to verify subscription status.
-    </p>
-    <p>
-      Subscription management and cancellations are handled through your Apple ID settings.
+      All purchases are processed by Apple through the App Store.
+      ChatPlus does not collect or store payment information.
     </p>
 
     <h2>User Control and Deletion</h2>
     <p>
-      You remain in control of your data. You can delete individual chats or clear all conversation history within the App settings.
-    </p>
-    <p>
+      You may delete chats or clear conversation history within the App.
       Deleting the App removes all locally stored data from your device.
     </p>
 
     <h2>Children’s Privacy</h2>
     <p>
-      ChatPlus is not intended for children under the age of 13. We do not knowingly process personal information from children.
-    </p>
-    <p>
-      If we become aware that such data has been submitted, it will be promptly deleted.
+      ChatPlus is not intended for children under the age of 13.
+      If we become aware of such data, it will be promptly deleted.
     </p>
 
     <h2>Data Security</h2>
     <p>
-      We use reasonable administrative and technical measures to protect information from unauthorized access or misuse.
-    </p>
-    <p>
-      While no system can guarantee absolute security, protecting user data is a top priority.
+      We use reasonable administrative and technical safeguards to protect information.
+      No system can guarantee absolute security.
     </p>
 
     <h2>Changes to This Policy</h2>
     <p>
-      We may update this Privacy Policy from time to time. Any changes will be reflected by updating the effective date at the top of this page.
+      We may update this Privacy Policy from time to time by revising the effective date above.
     </p>
 
     <h2>Contact Information</h2>
-    <p>
-      If you have questions regarding this Privacy Policy, please contact us at:
-    </p>
     <p>
       Email: <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br />
       Website: <a href="https://yourdomain.com">https://yourdomain.com</a>
     </p>
   </div>
+
+  <!-- Particle Script -->
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+
+    let particles = [];
+    const count = 60;
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    function createParticles() {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 1.5 + 0.5,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+        });
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "rgba(255,255,255,0.6)";
+
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    createParticles();
+    animate();
+  </script>
+
 </body>
 </html>
