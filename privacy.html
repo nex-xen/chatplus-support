@@ -1,302 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChatPlus Privacy Policy</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ChatPlus Privacy Policy</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(
-          circle at top left,
-          rgba(247, 24, 255, 0.25),
-          transparent 40%
-        ),
-        radial-gradient(
-          circle at top right,
-          rgba(30, 113, 255, 0.25),
-          transparent 40%
-        ),
-        #1E1E1E;
-      color: #ffffff;
-      line-height: 1.75;
-    }
+<style>
+  :root {
+    --dark: #1E1E1E;
+    --blue: #1E71FF;
+    --purple: #F718FF;
+  }
 
-    .container {
-      max-width: 960px;
-      margin: 80px auto;
-      padding: 56px;
-      border-radius: 28px;
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(26px) saturate(160%);
-      -webkit-backdrop-filter: blur(26px) saturate(160%);
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+      "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(247,24,255,0.35), transparent 40%),
+      radial-gradient(circle at 80% 30%, rgba(30,113,255,0.35), transparent 45%),
+      linear-gradient(180deg, #0d0d12, #1E1E1E);
+    overflow-x: hidden;
+  }
+
+  canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 80px auto;
+    padding: 56px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 28px;
+    box-shadow: 0 40px 90px rgba(0,0,0,0.6);
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, var(--purple), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .date {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0 0 18px;
+    color: rgba(255,255,255,0.95);
+  }
+
+  ul {
+    margin: 0 0 18px 18px;
+    padding: 0;
+  }
+
+  li {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      margin: 40px 16px;
+      padding: 36px 24px;
     }
 
     h1 {
-      font-size: 42px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #F718FF, #1E71FF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .date {
-      font-size: 15px;
-      opacity: 0.8;
-      margin-bottom: 40px;
+      font-size: 32px;
     }
 
     h2 {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 26px;
-      font-weight: 500;
-      margin-top: 48px;
-      margin-bottom: 14px;
-      background: linear-gradient(90deg, #1E71FF, #F718FF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 22px;
     }
-
-    p {
-      font-size: 17px;
-      color: rgba(255, 255, 255, 0.92);
-      margin: 12px 0 24px;
-    }
-
-    .icon {
-      width: 22px;
-      height: 22px;
-      flex-shrink: 0;
-      fill: none;
-      stroke: #F718FF;
-      stroke-width: 2;
-    }
-
-    a {
-      color: #1E71FF;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        margin: 40px 16px;
-        padding: 36px 24px;
-      }
-
-      h1 {
-        font-size: 34px;
-      }
-
-      h2 {
-        font-size: 22px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Privacy Policy</h1>
-    <div class="date">Effective Date: 24-12-2025</div>
 
-    <p>
-      ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application. By using the App, you agree to the practices described below.
-    </p>
+<canvas id="particles"></canvas>
 
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M12 3l8 4v6c0 5-3.5 8-8 8s-8-3-8-8V7l8-4z"/>
-      </svg>
-      No Account Required
-    </h2>
+<div class="wrapper">
 
-    <p>
-      You can use ChatPlus without creating an account. We do not ask for or collect your name, email address, phone number, or any government-issued identifiers.
-    </p>
+<h1>🛡️ ChatPlus Privacy Policy</h1>
+<div class="date"><strong>Effective Date:</strong> 24-12-2025</div>
 
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M4 4h16v16H4z"/>
-      </svg>
-      Information You Choose to Provide
-    </h2>
+<p>
+ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application. By using the App, you agree to the practices described below.
+</p>
 
-    <p>
-      To deliver app features, ChatPlus processes content that you submit, including:
-    </p>
+<h2>No Account Required</h2>
+<p>
+You can use ChatPlus without creating an account. We do not ask for or collect your name, email address, phone number, or any government-issued identifiers.
+</p>
 
-    <p>
-      Text input: Messages and prompts you send to the AI.<br />
-      Files and images: Documents or images you upload for analysis.<br />
-      Voice input: Audio used to convert speech into text.
-    </p>
+<h2>Information You Choose to Provide</h2>
+<p>
+To deliver app features, ChatPlus processes content that you submit, including:
+</p>
+<ul>
+  <li><strong>Text input:</strong> Messages and prompts you send to the AI.</li>
+  <li><strong>Files and images:</strong> Documents or images you upload for analysis.</li>
+  <li><strong>Voice input:</strong> Audio used to convert speech into text.</li>
+</ul>
+<p>
+This information is used only to perform the actions you request. It is not used for advertising, marketing, or profiling.
+</p>
 
-    <p>
-      This information is used only to perform the actions you request. It is not used for advertising, marketing, or profiling.
-    </p>
+<h2>AI Processing and Third-Party Services</h2>
+<p>
+To generate responses, ChatPlus securely transmits user-submitted content to trusted third-party AI service providers via encrypted connections.
+</p>
+<ul>
+  <li>ChatPlus does not use your content to train AI models.</li>
+  <li>Third-party service providers process content only to generate responses and provide requested functionality.</li>
+  <li>While ChatPlus does not store your content on its own servers, third-party providers may retain submitted data for a short, limited period solely to ensure service safety and identify platform abuse, in accordance with their security requirements.</li>
+</ul>
 
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="3"/>
-        <path d="M19.4 15a7 7 0 10-14.8 0"/>
-      </svg>
-      AI Processing and Third-Party Services
-    </h2>
+<h2>Data Storage and Retention</h2>
+<p>
+We follow a privacy-first, minimal-retention approach.
+</p>
+<ul>
+  <li>Chat history is stored locally on your device. We do not host your conversations on our servers.</li>
+  <li>Uploaded images, files, and voice data are processed in temporary memory and are automatically deleted shortly after processing, typically within 60 seconds.</li>
+  <li>If you delete chats or remove the App, the data is removed from your device and cannot be recovered by ChatPlus.</li>
+</ul>
 
-    <p>
-      To generate responses, ChatPlus securely transmits user-submitted content to trusted third-party AI service providers via encrypted connections.
-    </p>
+<h2>Technical Diagnostics</h2>
+<p>
+To keep the App stable, we collect limited technical diagnostics data, such as device type, operating system version, and crash information.
+</p>
+<ul>
+  <li>This data is not linked to your identity or your submitted content.</li>
+  <li>We do not use third-party analytics trackers.</li>
+</ul>
 
-    <p>
-      ChatPlus does not use your content to train AI models. Third-party service providers process content only to generate responses and provide requested functionality.
-    </p>
+<h2>Payments and Notifications</h2>
 
-    <p>
-      While ChatPlus does not store your content on its own servers, third-party providers may retain submitted data for a short, limited period solely to ensure service safety and identify platform abuse.
-    </p>
+<h3>Notifications</h3>
+<ul>
+  <li>ChatPlus may send notifications related to app functionality, service updates, or subscription status.</li>
+  <li>Notifications are sent only if you grant permission through the iOS system-level consent prompt.</li>
+  <li>You can enable or disable notifications at any time in your device settings. We do not send advertising or promotional notifications.</li>
+</ul>
 
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M3 3h18v18H3z"/>
-      </svg>
-      Data Storage and Retention
-    </h2>
+<h3>Payments and Subscriptions</h3>
+<ul>
+  <li>All purchases and subscriptions are processed by Apple through the App Store.</li>
+  <li>ChatPlus does not collect or store payment details. We receive only an anonymized confirmation to verify subscription status.</li>
+  <li>Subscription management and cancellations are handled through your Apple ID settings.</li>
+</ul>
 
-    <p>
-      We follow a privacy-first, minimal-retention approach. Chat history is stored locally on your device, and we do not host conversations on our servers.
-    </p>
+<h2>User Control and Security</h2>
 
-    <p>
-      Uploaded images, files, and voice data are processed in temporary memory and are automatically deleted shortly after processing, typically within 60 seconds.
-    </p>
+<h3>User Control and Deletion</h3>
+<ul>
+  <li>You can delete individual chats or clear all conversation history within the App settings.</li>
+  <li>Deleting the App removes all locally stored data from your device.</li>
+</ul>
 
-    <p>
-      If you delete chats or remove the App, the data is removed from your device and cannot be recovered by ChatPlus.
-    </p>
+<h3>Children’s Privacy</h3>
+<p>
+ChatPlus is not intended for children under the age of 13. We do not knowingly process personal information from children. If we become aware that such data has been submitted, it will be promptly deleted.
+</p>
 
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M12 20v-6M12 4v6"/>
-      </svg>
-      Technical Diagnostics
-    </h2>
+<h3>Data Security</h3>
+<p>
+We use reasonable administrative and technical measures to protect information from unauthorized access or misuse. While no system can guarantee absolute security, protecting user data is a top priority.
+</p>
 
-    <p>
-      To keep the App stable, we collect limited technical diagnostics data, such as device type, operating system version, and crash information.
-    </p>
+<h2>Changes to This Policy and Contact Information</h2>
 
-    <p>
-      This data is not linked to your identity or your submitted content. We do not use third-party analytics trackers.
-    </p>
+<h3>Changes to This Policy</h3>
+<p>
+We may update this Privacy Policy from time to time. Any changes will be reflected by updating the effective date at the top of this page.
+</p>
 
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M12 22s8-4 8-10V6l-8-4-8 4v6c0 6 8 10 8 10z"/>
-      </svg>
-      Notifications
-    </h2>
+<h3>Contact Information</h3>
+<p>
+<strong>Email:</strong> [Insert Support Email]<br />
+<strong>Website:</strong> [Insert Website URL]
+</p>
 
-    <p>
-      ChatPlus may send notifications related to app functionality, service updates, or subscription status.
-    </p>
+</div>
 
-    <p>
-      Notifications are sent only if you grant permission through the iOS system-level consent prompt. We do not send advertising or promotional notifications.
-    </p>
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+let particles = [];
+const COUNT = 80;
 
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M3 7h18M3 12h18M3 17h18"/>
-      </svg>
-      Payments and Subscriptions
-    </h2>
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
 
-    <p>
-      All purchases and subscriptions are processed by Apple through the App Store.
-      ChatPlus does not collect or store payment details.
-    </p>
+function init() {
+  particles = [];
+  for (let i = 0; i < COUNT; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.8 + 0.6,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      o: Math.random() * 0.7 + 0.3
+    });
+  }
+}
 
-    <p>
-      We receive only an anonymized confirmation to verify subscription status.
-      Subscription management and cancellations are handled through your Apple ID settings.
-    </p>
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    ctx.beginPath();
+    ctx.fillStyle = `rgba(255,255,255,${p.o})`;
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+  requestAnimationFrame(animate);
+}
 
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M12 4v16M4 12h16"/>
-      </svg>
-      User Control and Deletion
-    </h2>
+init();
+animate();
+</script>
 
-    <p>
-      You remain in control of your data. You can delete individual chats or clear all conversation history within the App settings.
-    </p>
-
-    <p>
-      Deleting the App removes all locally stored data from your device.
-    </p>
-
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-      </svg>
-      Children’s Privacy
-    </h2>
-
-    <p>
-      ChatPlus is not intended for children under the age of 13.
-      If we become aware that such data has been submitted, it will be promptly deleted.
-    </p>
-
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M12 3l8 4v6c0 5-3.5 8-8 8s-8-3-8-8V7l8-4z"/>
-      </svg>
-      Data Security
-    </h2>
-
-    <p>
-      We use reasonable administrative and technical measures to protect information from unauthorized access or misuse.
-    </p>
-
-    <p>
-      While no system can guarantee absolute security, protecting user data is a top priority.
-    </p>
-
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M3 12h18"/>
-      </svg>
-      Changes to This Policy
-    </h2>
-
-    <p>
-      We may update this Privacy Policy from time to time. Any changes will be reflected by updating the effective date at the top of this page.
-    </p>
-
-    <h2>
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M21 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8"/>
-        <path d="M21 8l-9 6-9-6"/>
-      </svg>
-      Contact Information
-    </h2>
-
-    <p>
-      Email: <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br />
-      Website: <a href="https://yourdomain.com">https://yourdomain.com</a>
-    </p>
-  </div>
 </body>
 </html>
