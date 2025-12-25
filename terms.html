@@ -230,7 +230,7 @@ These Terms are governed by and construed in accordance with the laws of the app
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 50;
+const COUNT = 25;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -245,7 +245,7 @@ function init() {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 2.8 + 1.6,
+      r: Math.random() * 4.8 + 2.6,
       vx: (Math.random() - 0.5) * 0.25,
       vy: (Math.random() - 0.5) * 0.25,
       o: Math.random() * 0.7 + 0.3
