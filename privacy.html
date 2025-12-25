@@ -62,8 +62,8 @@ canvas {
   padding: 64px;
 
   background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(1%);
-  -webkit-backdrop-filter: blur(1%);
+  backdrop-filter: blur(3%);
+  -webkit-backdrop-filter: blur(3%);
 
   border-radius: 48px;
   border: 1px solid rgba(255,255,255,0.18);
@@ -245,7 +245,7 @@ function init() {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 1.6 + 0.8,
+      r: Math.random() * 2.8 + 1.6,
       vx: (Math.random() - 0.5) * 0.6,
       vy: (Math.random() - 0.5) * 0.6,
       o: Math.random() * 0.6 + 0.4
