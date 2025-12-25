@@ -20,33 +20,6 @@ body {
     background: #000;
     overflow-y: auto;
   }
-
-  /* ===== FIXED HERO BACKGROUND ===== */
-  .background {
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-    background:
-      radial-gradient(1300px 750px at 20% 30%, rgba(255, 120, 255, 0.50), transparent 55%),
-      radial-gradient(1100px 700px at 80% 25%, rgba(120, 200, 255, 0.50), transparent 60%),
-      radial-gradient(900px 600px at 60% 80%, rgba(255, 180, 120, 0.45), transparent 65%),
-      linear-gradient(180deg, #04040A, #0C0E1A, #1E1E1E);
-    background-size: 220% 220%;
-    animation: gradientGlow 10s ease-in-out infinite;
-  }
-
-  @keyframes gradientGlow {
-    0% {
-      background-position: 20% 30%, 80% 25%, 60% 80%, 0% 0%;
-    }
-    50% {
-      background-position: 30% 20%, 70% 35%, 55% 70%, 0% 0%;
-    }
-    100% {
-      background-position: 20% 30%, 80% 25%, 60% 80%, 0% 0%;
-    }
-}
-
 /* ---------- PARTICLES ---------- */
 canvas {
   position: fixed;
