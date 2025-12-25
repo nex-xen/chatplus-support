@@ -39,9 +39,9 @@
     margin: 80px auto;
     padding: 56px;
     background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border-radius: 28px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 48px;
     box-shadow: 0 40px 90px rgba(0,0,0,0.6);
   }
 
@@ -230,7 +230,7 @@ These Terms are governed by and construed in accordance with the laws of the app
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 80;
+const COUNT = 50;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -245,7 +245,7 @@ function init() {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 1.8 + 0.6,
+      r: Math.random() * 2.8 + 1.6,
       vx: (Math.random() - 0.5) * 0.25,
       vy: (Math.random() - 0.5) * 0.25,
       o: Math.random() * 0.7 + 0.3
