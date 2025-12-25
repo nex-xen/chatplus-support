@@ -12,22 +12,22 @@
 
   body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
       "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #ffffff;
-    overflow: hidden;
+    background: #000;
   }
 
   /* FIXED BACKGROUND */
   .background {
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: -2;
     background:
-      radial-gradient(1200px 700px at 30% 35%, rgba(255, 180, 90, 0.35), transparent 55%),
-      radial-gradient(1000px 600px at 75% 25%, rgba(255, 90, 200, 0.35), transparent 60%),
-      radial-gradient(800px 500px at 60% 80%, rgba(80, 140, 255, 0.35), transparent 65%),
+      radial-gradient(1200px 700px at 30% 35%, rgba(255, 180, 90, 0.38), transparent 55%),
+      radial-gradient(1000px 600px at 75% 25%, rgba(255, 90, 200, 0.38), transparent 60%),
+      radial-gradient(800px 500px at 60% 80%, rgba(80, 140, 255, 0.38), transparent 65%),
       linear-gradient(180deg, #050409, #0E0B16, #1E1E1E);
     background-size: 200% 200%;
     animation: gradientGlow 22s ease-in-out infinite;
@@ -49,30 +49,26 @@
   canvas {
     position: fixed;
     inset: 0;
-    z-index: 1;
+    z-index: -1;
     pointer-events: none;
-  }
-
-  /* SCROLL CONTAINER */
-  .content {
-    position: relative;
-    z-index: 2;
-    height: 100vh;
-    overflow-y: auto;
-    padding: 80px 16px;
   }
 
   /* GLASS CARD */
   .wrapper {
     max-width: 960px;
-    margin: auto;
+    margin: 80px auto;
     padding: 56px;
-    background: rgba(255, 255, 255, 0.045);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border-radius: 44px;
-    border: 1px solid rgba(255,255,255,0.16);
-    box-shadow: 0 40px 90px rgba(0,0,0,0.5);
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255,255,255,0.10),
+        rgba(255,255,255,0.02)
+      );
+    border-radius: 52px;
+    border: 1px solid rgba(255,255,255,0.28);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.25),
+      0 40px 90px rgba(0,0,0,0.55);
   }
 
   h1 { font-size: 40px; font-weight: 700; margin-bottom: 12px; }
@@ -91,11 +87,14 @@
   li { margin-bottom: 8px; }
 
   strong { color: #ffffff; font-weight: 600; }
-
   a { color: #ffffff; text-decoration: underline; }
 
   @media (max-width: 768px) {
-    .wrapper { padding: 36px 24px; border-radius: 36px; }
+    .wrapper {
+      margin: 40px 16px;
+      padding: 36px 24px;
+      border-radius: 40px;
+    }
     h1 { font-size: 32px; }
     h2 { font-size: 22px; }
   }
@@ -107,58 +106,54 @@
 <div class="background"></div>
 <canvas id="particles"></canvas>
 
-<div class="content">
-  <div class="wrapper">
+<div class="wrapper">
 
-    <h1>ChatPlus Privacy Policy</h1>
-    <div class="date"><strong>Effective Date:</strong> 24-12-2025</div>
+  <h1>ChatPlus Privacy Policy</h1>
+  <div class="date"><strong>Effective Date:</strong> 24-12-2025</div>
 
-    <p>
-      ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application.
-    </p>
+  <p>
+    ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application.
+  </p>
 
-    <h2>No Account Required</h2>
-    <p>
-      You can use ChatPlus without creating an account. We do not collect personal identifiers.
-    </p>
+  <h2>No Account Required</h2>
+  <p>You can use ChatPlus without creating an account. We do not collect personal identifiers.</p>
 
-    <h2>Information You Choose to Provide</h2>
-    <ul>
-      <li><strong>Text input:</strong> Messages you send</li>
-      <li><strong>Files and images:</strong> Uploaded for analysis</li>
-      <li><strong>Voice input:</strong> Used for transcription</li>
-    </ul>
+  <h2>Information You Choose to Provide</h2>
+  <ul>
+    <li><strong>Text input:</strong> Messages you send</li>
+    <li><strong>Files and images:</strong> Uploaded for analysis</li>
+    <li><strong>Voice input:</strong> Used for transcription</li>
+  </ul>
 
-    <h2>AI Processing and Third-Party Services</h2>
-    <ul>
-      <li>Content is not used to train AI models</li>
-      <li>Processed only to deliver functionality</li>
-      <li>Temporary retention for security purposes only</li>
-    </ul>
+  <h2>AI Processing and Third-Party Services</h2>
+  <ul>
+    <li>Content is not used to train AI models</li>
+    <li>Processed only to deliver functionality</li>
+    <li>Temporary retention for security purposes only</li>
+  </ul>
 
-    <h2>Data Storage and Retention</h2>
-    <ul>
-      <li>Chats stored locally on device</li>
-      <li>Files deleted within ~60 seconds</li>
-      <li>Deleting the app removes all data</li>
-    </ul>
+  <h2>Data Storage and Retention</h2>
+  <ul>
+    <li>Chats stored locally on device</li>
+    <li>Files deleted within ~60 seconds</li>
+    <li>Deleting the app removes all data</li>
+  </ul>
 
-    <h2>Contact</h2>
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br>
-      <strong>Website:</strong>
-      <a href="https://yourdomain.com">https://yourdomain.com</a>
-    </p>
+  <h2>Contact</h2>
+  <p>
+    <strong>Email:</strong>
+    <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br>
+    <strong>Website:</strong>
+    <a href="https://yourdomain.com">https://yourdomain.com</a>
+  </p>
 
-  </div>
 </div>
 
 <script>
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 120;
+const COUNT = 140;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -171,10 +166,10 @@ for (let i = 0; i < COUNT; i++) {
   particles.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    r: Math.random() * 1.9 + 0.6,
-    vx: (Math.random() - 0.5) * 0.3,
-    vy: (Math.random() - 0.5) * 0.3,
-    o: Math.random() * 0.9 + 0.4
+    r: Math.random() * 2.2 + 0.8,
+    vx: (Math.random() - 0.5) * 0.35,
+    vy: (Math.random() - 0.5) * 0.35,
+    o: Math.random() * 0.9 + 0.6
   });
 }
 
