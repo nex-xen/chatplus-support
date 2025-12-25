@@ -12,69 +12,39 @@ html {
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  background: #050409;
-  overflow-x: hidden;
-}
-
-/* ---------- ANIMATED GRADIENT BACKGROUND ---------- */
-.animated-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      1200px 1200px at 20% 50%,
-      rgba(120, 43, 189, 0.85),
-      rgba(120, 43, 189, 0.25) 55%,
-      transparent 70%
-    ),
-    radial-gradient(
-      900px 900px at 50% 40%,
-      rgba(252, 168, 13, 0.85),
-      rgba(205, 33, 144, 0.45) 45%,
-      transparent 65%
-    ),
-    radial-gradient(
-      1100px 1100px at 80% 60%,
-      rgba(120, 43, 189, 0.75),
-      rgba(120, 43, 189, 0.25) 55%,
-      transparent 70%
-    ),
-    linear-gradient(180deg, #050409, #0E0B16, #1A0F24);
-
-  background-size: 200% 200%;
-  animation: glowShift 26s ease-in-out infinite;
-}
-
-@keyframes glowShift {
-  0% {
-    background-position:
-      20% 50%,
-      50% 40%,
-      80% 60%,
-      0% 0%;
+     margin: 0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+      "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    background: #000;
+    overflow-y: auto;
   }
-  50% {
-    background-position:
-      30% 45%,
-      45% 48%,
-      70% 55%,
-      0% 0%;
+
+  /* ===== FIXED HERO BACKGROUND ===== */
+  .background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(1300px 750px at 20% 30%, rgba(255, 120, 255, 0.50), transparent 55%),
+      radial-gradient(1100px 700px at 80% 25%, rgba(120, 200, 255, 0.50), transparent 60%),
+      radial-gradient(900px 600px at 60% 80%, rgba(255, 180, 120, 0.45), transparent 65%),
+      linear-gradient(180deg, #04040A, #0C0E1A, #1E1E1E);
+    background-size: 220% 220%;
+    animation: gradientGlow 10s ease-in-out infinite;
   }
-  100% {
-    background-position:
-      20% 50%,
-      50% 40%,
-      80% 60%,
-      0% 0%;
-  }
+
+  @keyframes gradientGlow {
+    0% {
+      background-position: 20% 30%, 80% 25%, 60% 80%, 0% 0%;
+    }
+    50% {
+      background-position: 30% 20%, 70% 35%, 55% 70%, 0% 0%;
+    }
+    100% {
+      background-position: 20% 30%, 80% 25%, 60% 80%, 0% 0%;
+    }
 }
 
 /* ---------- PARTICLES ---------- */
