@@ -19,33 +19,33 @@
     background: #000;
   }
 
-  /* FIXED BACKGROUND */
+  /* ===== FIXED HERO BACKGROUND ===== */
   .background {
     position: fixed;
     inset: 0;
     z-index: -2;
     background:
-      radial-gradient(1200px 700px at 30% 35%, rgba(255, 180, 90, 0.38), transparent 55%),
-      radial-gradient(1000px 600px at 75% 25%, rgba(255, 90, 200, 0.38), transparent 60%),
-      radial-gradient(800px 500px at 60% 80%, rgba(80, 140, 255, 0.38), transparent 65%),
-      linear-gradient(180deg, #050409, #0E0B16, #1E1E1E);
-    background-size: 200% 200%;
-    animation: gradientGlow 22s ease-in-out infinite;
+      radial-gradient(1300px 750px at 20% 30%, rgba(255, 120, 255, 0.45), transparent 55%),
+      radial-gradient(1100px 700px at 80% 25%, rgba(120, 200, 255, 0.45), transparent 60%),
+      radial-gradient(900px 600px at 60% 80%, rgba(255, 180, 120, 0.40), transparent 65%),
+      linear-gradient(180deg, #04040A, #0C0E1A, #1E1E1E);
+    background-size: 220% 220%;
+    animation: gradientGlow 18s ease-in-out infinite;
   }
 
   @keyframes gradientGlow {
     0% {
-      background-position: 30% 35%, 75% 25%, 60% 80%, 0% 0%;
+      background-position: 20% 30%, 80% 25%, 60% 80%, 0% 0%;
     }
     50% {
-      background-position: 35% 30%, 70% 30%, 55% 75%, 0% 0%;
+      background-position: 30% 20%, 70% 35%, 55% 70%, 0% 0%;
     }
     100% {
-      background-position: 30% 35%, 75% 25%, 60% 80%, 0% 0%;
+      background-position: 20% 30%, 80% 25%, 60% 80%, 0% 0%;
     }
   }
 
-  /* PARTICLES */
+  /* ===== PARTICLES ===== */
   canvas {
     position: fixed;
     inset: 0;
@@ -53,7 +53,7 @@
     pointer-events: none;
   }
 
-  /* GLASS CARD */
+  /* ===== GLASS CARD ===== */
   .wrapper {
     max-width: 960px;
     margin: 80px auto;
@@ -62,10 +62,12 @@
       linear-gradient(
         135deg,
         rgba(255,255,255,0.10),
-        rgba(255,255,255,0.02)
+        rgba(255,255,255,0.03)
       );
-    border-radius: 52px;
-    border: 1px solid rgba(255,255,255,0.28);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 56px;
+    border: 1px solid rgba(255,255,255,0.30);
     box-shadow:
       inset 0 1px 0 rgba(255,255,255,0.25),
       0 40px 90px rgba(0,0,0,0.55);
@@ -93,7 +95,7 @@
     .wrapper {
       margin: 40px 16px;
       padding: 36px 24px;
-      border-radius: 40px;
+      border-radius: 44px;
     }
     h1 { font-size: 32px; }
     h2 { font-size: 22px; }
@@ -108,44 +110,92 @@
 
 <div class="wrapper">
 
-  <h1>ChatPlus Privacy Policy</h1>
-  <div class="date"><strong>Effective Date:</strong> 24-12-2025</div>
+<h1>ChatPlus Privacy Policy</h1>
+<div class="date"><strong>Effective Date:</strong> 24-12-2025</div>
 
-  <p>
-    ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application.
-  </p>
+<p>
+ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application. By using the App, you agree to the practices described below.
+</p>
 
-  <h2>No Account Required</h2>
-  <p>You can use ChatPlus without creating an account. We do not collect personal identifiers.</p>
+<h2>No Account Required</h2>
+<p>
+You can use ChatPlus without creating an account. We do not ask for or collect your name, email address, phone number, or any government-issued identifiers.
+</p>
 
-  <h2>Information You Choose to Provide</h2>
-  <ul>
-    <li><strong>Text input:</strong> Messages you send</li>
-    <li><strong>Files and images:</strong> Uploaded for analysis</li>
-    <li><strong>Voice input:</strong> Used for transcription</li>
-  </ul>
+<h2>Information You Choose to Provide</h2>
+<p>
+To deliver app features, ChatPlus processes content that you submit, including:
+</p>
+<ul>
+  <li><strong>Text input:</strong> Messages and prompts you send to the AI.</li>
+  <li><strong>Files and images:</strong> Documents or images you upload for analysis.</li>
+  <li><strong>Voice input:</strong> Audio used to convert speech into text.</li>
+</ul>
+<p>
+This information is used only to perform the actions you request. It is not used for advertising, marketing, or profiling.
+</p>
 
-  <h2>AI Processing and Third-Party Services</h2>
-  <ul>
-    <li>Content is not used to train AI models</li>
-    <li>Processed only to deliver functionality</li>
-    <li>Temporary retention for security purposes only</li>
-  </ul>
+<h2>AI Processing and Third-Party Services</h2>
+<p>
+To generate responses, ChatPlus securely transmits user-submitted content to trusted third-party AI service providers via encrypted connections.
+</p>
+<p>
+ChatPlus does not use your content to train AI models. Third-party service providers process content only to generate responses and provide requested functionality.
+</p>
+<p>
+While ChatPlus does not store your content on its own servers, third-party providers may retain submitted data for a short, limited period solely to ensure service safety and identify platform abuse, in accordance with their security requirements.
+</p>
 
-  <h2>Data Storage and Retention</h2>
-  <ul>
-    <li>Chats stored locally on device</li>
-    <li>Files deleted within ~60 seconds</li>
-    <li>Deleting the app removes all data</li>
-  </ul>
+<h2>Data Storage and Retention</h2>
+<p>
+We follow a privacy-first, minimal-retention approach.
+</p>
+<ul>
+  <li>Chat history is stored locally on your device. We do not host your conversations on our servers.</li>
+  <li>Uploaded images, files, and voice data are processed in temporary memory and are automatically deleted shortly after processing, typically within 60 seconds.</li>
+  <li>If you delete chats or remove the App, the data is removed from your device and cannot be recovered by ChatPlus.</li>
+</ul>
 
-  <h2>Contact</h2>
-  <p>
-    <strong>Email:</strong>
-    <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br>
-    <strong>Website:</strong>
-    <a href="https://yourdomain.com">https://yourdomain.com</a>
-  </p>
+<h2>Technical Diagnostics</h2>
+<p>
+To keep the App stable, we collect limited technical diagnostics data, such as device type, operating system version, and crash information. This data is not linked to your identity or your submitted content. We do not use third-party analytics trackers.
+</p>
+
+<h2>Notifications</h2>
+<p>
+ChatPlus may send notifications related to app functionality, service updates, or subscription status. Notifications are sent only if you grant permission through the iOS system-level consent prompt. You can enable or disable notifications at any time in your device settings. We do not send advertising or promotional notifications.
+</p>
+
+<h2>Payments and Subscriptions</h2>
+<p>
+All purchases and subscriptions are processed by Apple through the App Store. ChatPlus does not collect or store payment details. We receive only an anonymized confirmation to verify subscription status. Subscription management and cancellations are handled through your Apple ID settings.
+</p>
+
+<h2>User Control and Deletion</h2>
+<p>
+You remain in control of your data. You can delete individual chats or clear all conversation history within the App settings. Deleting the App removes all locally stored data from your device.
+</p>
+
+<h2>Children’s Privacy</h2>
+<p>
+ChatPlus is not intended for children under the age of 13. We do not knowingly process personal information from children. If we become aware that such data has been submitted, it will be promptly deleted.
+</p>
+
+<h2>Data Security</h2>
+<p>
+We use reasonable administrative and technical measures to protect information from unauthorized access or misuse. While no system can guarantee absolute security, protecting user data is a top priority.
+</p>
+
+<h2>Changes to This Policy</h2>
+<p>
+We may update this Privacy Policy from time to time. Any changes will be reflected by updating the effective date at the top of this page.
+</p>
+
+<h2>Contact Information</h2>
+<p>
+<strong>Email:</strong> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br>
+<strong>Website:</strong> <a href="https://yourdomain.com">https://yourdomain.com</a>
+</p>
 
 </div>
 
@@ -153,7 +203,7 @@
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 140;
+const COUNT = 90;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -166,10 +216,10 @@ for (let i = 0; i < COUNT; i++) {
   particles.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    r: Math.random() * 2.2 + 0.8,
-    vx: (Math.random() - 0.5) * 0.35,
-    vy: (Math.random() - 0.5) * 0.35,
-    o: Math.random() * 0.9 + 0.6
+    r: Math.random() * 1.8 + 0.6,
+    vx: (Math.random() - 0.5) * 0.25,
+    vy: (Math.random() - 0.5) * 0.25,
+    o: Math.random() * 0.7 + 0.4
   });
 }
 
