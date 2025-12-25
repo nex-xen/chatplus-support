@@ -230,7 +230,7 @@ We may update this Privacy Policy from time to time. Any changes will be reflect
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 25;
+const COUNT = 15;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -245,7 +245,7 @@ function init() {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 2.8 + 1.6,
+      r: Math.random() * 2.9 + 1.8,
       vx: (Math.random() - 0.5) * 0.6,
       vy: (Math.random() - 0.5) * 0.6,
       o: Math.random() * 0.6 + 0.4
@@ -263,7 +263,7 @@ function animate() {
     if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
 
     ctx.beginPath();
-    ctx.fillStyle = `rgba(255, 20, 241, 0.3)`;
+    ctx.fillStyle = `rgba(255, 20, 241, 0.2)`;
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
     ctx.fill();
   });
