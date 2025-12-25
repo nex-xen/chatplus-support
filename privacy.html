@@ -65,7 +65,7 @@ canvas {
   backdrop-filter: blur(1%);
   -webkit-backdrop-filter: blur(1%);
 
-  border-radius: 36px;
+  border-radius: 48px;
   border: 1px solid rgba(255,255,255,0.18);
 
   box-shadow:
@@ -230,7 +230,7 @@ We may update this Privacy Policy from time to time. Any changes will be reflect
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 55;
+const COUNT = 25;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -263,7 +263,7 @@ function animate() {
     if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
 
     ctx.beginPath();
-    ctx.fillStyle = `rgba(255,255,255,${p.o})`;
+    ctx.fillStyle = `rgba(255,20,241,${p.30})`;
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
     ctx.fill();
   });
