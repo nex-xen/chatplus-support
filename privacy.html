@@ -1,278 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ChatPlus Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-/* ---------- GLOBAL ---------- */
-html {
-  scroll-behavior: smooth;
-}
+  <title>ChatPlus – Privacy Policy</title>
 
-body {
-     margin: 0;
-    min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-      "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #ffffff;
-    background: #000;
-    overflow-y: auto;
-  }
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  /* ===== FIXED HERO BACKGROUND ===== */
-  .background {
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-    background:
-      radial-gradient(1300px 750px at 20% 30%, rgba(255, 120, 255, 0.50), transparent 55%),
-      radial-gradient(1100px 700px at 80% 25%, rgba(120, 200, 255, 0.50), transparent 60%),
-      radial-gradient(900px 600px at 60% 80%, rgba(255, 180, 120, 0.45), transparent 65%),
-      linear-gradient(180deg, #04040A, #0C0E1A, #1E1E1E);
-    background-size: 220% 220%;
-    animation: gradientGlow 10s ease-in-out infinite;
-  }
-
-  @keyframes gradientGlow {
-    0% {
-      background-position: 20% 30%, 80% 25%, 60% 80%, 0% 0%;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    50% {
-      background-position: 30% 20%, 70% 35%, 55% 70%, 0% 0%;
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #ffffff;
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 700px at 20% 25%, rgba(90, 200, 255, 0.38), transparent 55%),
+        radial-gradient(1100px 650px at 80% 30%, rgba(180, 90, 255, 0.38), transparent 60%),
+        radial-gradient(900px 500px at 60% 75%, rgba(255, 120, 180, 0.28), transparent 65%),
+        linear-gradient(180deg, #05060A, #0E0F1A, #1E1E1E);
+      background-size: 200% 200%;
+      animation: gradientGlow 22s ease-in-out infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
     }
-    100% {
-      background-position: 20% 30%, 80% 25%, 60% 80%, 0% 0%;
+
+    @keyframes gradientGlow {
+      0% {
+        background-position: 20% 25%, 80% 30%, 60% 75%, 0% 0%;
+      }
+      50% {
+        background-position: 25% 30%, 75% 25%, 55% 70%, 0% 0%;
+      }
+      100% {
+        background-position: 20% 25%, 80% 30%, 60% 75%, 0% 0%;
+      }
     }
-}
 
-/* ---------- PARTICLES ---------- */
-canvas {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-}
+    .card {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 48px 56px;
+      box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+      max-height: 92vh;
+    }
 
-/* ---------- CONTENT WRAPPER ---------- */
-.wrapper {
-  max-width: 960px;
-  margin: 120px auto;
-  padding: 64px;
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
 
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(1%);
-  -webkit-backdrop-filter: blur(1%);
+    .date {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+      color: rgba(255, 255, 255, 0.7);
+    }
 
-  border-radius: 36px;
-  border: 1px solid rgba(255,255,255,0.18);
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
 
-  box-shadow:
-    inset 0 0 40px rgba(255,255,255,0.08),
-    0 60px 120px rgba(0,0,0,0.65);
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 15px;
+    }
 
-  position: relative;
-}
+    ul {
+      margin-left: 18px;
+      margin-bottom: 15px;
+    }
 
-/* ---------- TYPOGRAPHY ---------- */
-h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
+    li {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 6px;
+    }
 
-.date {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 40px;
-}
+    strong {
+      font-weight: 600;
+      color: #ffffff;
+    }
 
-h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 48px;
-  margin-bottom: 16px;
-}
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+      font-weight: 600;
+    }
 
-p, li {
-  font-size: 17px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.85);
-}
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
 
-ul {
-  margin: 0 0 18px 18px;
-  padding: 0;
-}
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 10px;
+    }
 
-strong {
-  color: #ffffff;
-  font-weight: 600;
-}
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
 
-a {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* ---------- MOBILE ---------- */
-@media (max-width: 768px) {
-  .wrapper {
-    margin: 80px 16px;
-    padding: 36px 24px;
-    border-radius: 28px;
-  }
-
-  h1 { font-size: 32px; }
-  h2 { font-size: 22px; }
-}
-</style>
+    @media (max-width: 600px) {
+      .card {
+        padding: 32px 24px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="animated-bg"></div>
-<canvas id="particles"></canvas>
+  <div class="card">
+    <h1>Privacy Policy</h1>
+    <div class="date"><strong>Effective Date:</strong> 24-12-2025</div>
 
-<div class="wrapper">
+    <p>
+      ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application. By using the App, you agree to the practices described below.
+    </p>
 
-<h1>ChatPlus Privacy Policy</h1>
-<div class="date"><strong>Effective Date:</strong> 24-12-2025</div>
+    <h2>No Account Required</h2>
+    <p>
+      You can use ChatPlus without creating an account. We do not ask for or collect your name, email address, phone number, or any government-issued identifiers.
+    </p>
 
-<p>
-ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application. By using the App, you agree to the practices described below.
-</p>
+    <h2>Information You Choose to Provide</h2>
+    <p>
+      To deliver app features, ChatPlus processes content that you submit, including:
+    </p>
+    <ul>
+      <li><strong>Text input:</strong> Messages and prompts you send to the AI.</li>
+      <li><strong>Files and images:</strong> Documents or images you upload for analysis.</li>
+      <li><strong>Voice input:</strong> Audio used to convert speech into text.</li>
+    </ul>
+    <p>
+      This information is used only to perform the actions you request. It is not used for advertising, marketing, or profiling.
+    </p>
 
-<h2>No Account Required</h2>
-<p>
-You can use ChatPlus without creating an account. We do not ask for or collect your name, email address, phone number, or any government-issued identifiers.
-</p>
+    <h2>AI Processing and Third-Party Services</h2>
+    <p>
+      To generate responses, ChatPlus securely transmits user-submitted content to trusted third-party AI service providers via encrypted connections.
+    </p>
+    <ul>
+      <li>ChatPlus does not use your content to train AI models.</li>
+      <li>Third-party service providers process content only to generate responses and provide requested functionality.</li>
+      <li>While ChatPlus does not store your content on its own servers, third-party providers may retain submitted data for a short, limited period solely to ensure service safety and identify platform abuse, in accordance with their security requirements.</li>
+    </ul>
 
-<h2>Information You Choose to Provide</h2>
-<p>
-To deliver app features, ChatPlus processes content that you submit, including:
-</p>
-<ul>
-  <li><strong>Text input:</strong> Messages and prompts you send to the AI.</li>
-  <li><strong>Files and images:</strong> Documents or images you upload for analysis.</li>
-  <li><strong>Voice input:</strong> Audio used to convert speech into text.</li>
-</ul>
-<p>
-This information is used only to perform the actions you request. It is not used for advertising, marketing, or profiling.
-</p>
+    <h2>Data Storage and Retention</h2>
+    <p>
+      We follow a privacy-first, minimal-retention approach.
+    </p>
+    <ul>
+      <li>Chat history is stored locally on your device. We do not host your conversations on our servers.</li>
+      <li>Uploaded images, files, and voice data are processed in temporary memory and are automatically deleted shortly after processing, typically within 60 seconds.</li>
+      <li>If you delete chats or remove the App, the data is removed from your device and cannot be recovered by ChatPlus.</li>
+    </ul>
 
-<h2>AI Processing and Third-Party Services</h2>
-<p>
-To generate responses, ChatPlus securely transmits user-submitted content to trusted third-party AI service providers via encrypted connections.
-</p>
-<ul>
-  <li>ChatPlus does not use your content to train AI models.</li>
-  <li>Third-party service providers process content only to generate responses and provide requested functionality.</li>
-  <li>While ChatPlus does not store your content on its own servers, third-party providers may retain submitted data for a short, limited period solely to ensure service safety and identify platform abuse, in accordance with their security requirements.</li>
-</ul>
+    <h2>Technical Diagnostics</h2>
+    <p>
+      To keep the App stable, we collect limited technical diagnostics data, such as device type, operating system version, and crash information. This data is not linked to your identity or your submitted content. We do not use third-party analytics trackers.
+    </p>
 
-<h2>Data Storage and Retention</h2>
-<p>
-We follow a privacy-first, minimal-retention approach.
-</p>
-<ul>
-  <li>Chat history is stored locally on your device. We do not host your conversations on our servers.</li>
-  <li>Uploaded images, files, and voice data are processed in temporary memory and are automatically deleted shortly after processing, typically within 60 seconds.</li>
-  <li>If you delete chats or remove the App, the data is removed from your device and cannot be recovered by ChatPlus.</li>
-</ul>
+    <h2>Notifications</h2>
+    <p>
+      ChatPlus may send notifications related to app functionality, service updates, or subscription status. Notifications are sent only if you grant permission through the iOS system-level consent prompt. You can enable or disable notifications at any time in your device settings. We do not send advertising or promotional notifications.
+    </p>
 
-<h2>Technical Diagnostics</h2>
-<p>
-To keep the App stable, we collect limited technical diagnostics data, such as device type, operating system version, and crash information. This data is not linked to your identity or your submitted content. We do not use third-party analytics trackers.
-</p>
+    <h2>Payments and Subscriptions</h2>
+    <p>
+      All purchases and subscriptions are processed by Apple through the App Store. ChatPlus does not collect or store payment details. We receive only an anonymized confirmation to verify subscription status. Subscription management and cancellations are handled through your Apple ID settings.
+    </p>
 
-<h2>Notifications</h2>
-<p>
-ChatPlus may send notifications related to app functionality, service updates, or subscription status. Notifications are sent only if you grant permission through the iOS system-level consent prompt. You can enable or disable notifications at any time in your device settings. We do not send advertising or promotional notifications.
-</p>
+    <h2>User Control and Deletion</h2>
+    <p>
+      You remain in control of your data. You can delete individual chats or clear all conversation history within the App settings. Deleting the App removes all locally stored data from your device.
+    </p>
 
-<h2>Payments and Subscriptions</h2>
-<p>
-All purchases and subscriptions are processed by Apple through the App Store. ChatPlus does not collect or store payment details. We receive only an anonymized confirmation to verify subscription status. Subscription management and cancellations are handled through your Apple ID settings.
-</p>
+    <h2>Children’s Privacy</h2>
+    <p>
+      ChatPlus is not intended for children under the age of 13. We do not knowingly process personal information from children. If we become aware that such data has been submitted, it will be promptly deleted.
+    </p>
 
-<h2>User Control and Deletion</h2>
-<p>
-You remain in control of your data. You can delete individual chats or clear all conversation history within the App settings. Deleting the App removes all locally stored data from your device.
-</p>
+    <h2>Data Security</h2>
+    <p>
+      We use reasonable administrative and technical measures to protect information from unauthorized access or misuse. While no system can guarantee absolute security, protecting user data is a top priority.
+    </p>
 
-<h2>Children’s Privacy</h2>
-<p>
-ChatPlus is not intended for children under the age of 13. We do not knowingly process personal information from children. If we become aware that such data has been submitted, it will be promptly deleted.
-</p>
+    <h2>Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will be reflected by updating the effective date at the top of this page.
+    </p>
 
-<h2>Data Security</h2>
-<p>
-We use reasonable administrative and technical measures to protect information from unauthorized access or misuse. While no system can guarantee absolute security, protecting user data is a top priority.
-</p>
+    <h2>Contact Information</h2>
+    <p>
+      If you have questions regarding this Privacy Policy, please contact us at:<br />
+      <strong>Email:</strong> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br />
+      <strong>Website:</strong> <a href="https://yourdomain.com">https://yourdomain.com</a>
+    </p>
 
-<h2>Changes to This Policy</h2>
-<p>
-We may update this Privacy Policy from time to time. Any changes will be reflected by updating the effective date at the top of this page.
-</p>
-
-<h2>Contact Information</h2>
-<p>
-<strong>Email:</strong> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br />
-<strong>Website:</strong> <a href="https://yourdomain.com">https://yourdomain.com</a>
-</p>
-
-</div>
-
-<script>
-/* ---------- PARTICLE SYSTEM (FASTER) ---------- */
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-let particles = [];
-const COUNT = 55;
-
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-window.addEventListener("resize", resize);
-resize();
-
-function init() {
-  particles = [];
-  for (let i = 0; i < COUNT; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 1.6 + 0.8,
-      vx: (Math.random() - 0.5) * 0.6,
-      vy: (Math.random() - 0.5) * 0.6,
-      o: Math.random() * 0.6 + 0.4
-    });
-  }
-}
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => {
-    p.x += p.vx;
-    p.y += p.vy;
-
-    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-    ctx.beginPath();
-    ctx.fillStyle = `rgba(255,255,255,${p.o})`;
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fill();
-  });
-  requestAnimationFrame(animate);
-}
-
-init();
-animate();
-</script>
+  </div>
 
 </body>
 </html>
