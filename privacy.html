@@ -6,6 +6,10 @@
 <title>ChatPlus Privacy Policy</title>
 
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     height: 100vh;
@@ -41,6 +45,7 @@
     }
   }
 
+  /* PARTICLES */
   canvas {
     position: fixed;
     inset: 0;
@@ -62,12 +67,12 @@
     max-width: 960px;
     margin: auto;
     padding: 56px;
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(28px);
-    -webkit-backdrop-filter: blur(28px);
-    border-radius: 36px;
-    border: 1px solid rgba(255,255,255,0.18);
-    box-shadow: 0 40px 90px rgba(0,0,0,0.55);
+    background: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 44px;
+    border: 1px solid rgba(255,255,255,0.16);
+    box-shadow: 0 40px 90px rgba(0,0,0,0.5);
   }
 
   h1 { font-size: 40px; font-weight: 700; margin-bottom: 12px; }
@@ -79,7 +84,7 @@
   p, li {
     font-size: 17px;
     line-height: 1.7;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.82);
   }
 
   ul { margin: 0 0 18px 18px; padding: 0; }
@@ -90,7 +95,7 @@
   a { color: #ffffff; text-decoration: underline; }
 
   @media (max-width: 768px) {
-    .wrapper { padding: 36px 24px; }
+    .wrapper { padding: 36px 24px; border-radius: 36px; }
     h1 { font-size: 32px; }
     h2 { font-size: 22px; }
   }
@@ -108,10 +113,14 @@
     <h1>ChatPlus Privacy Policy</h1>
     <div class="date"><strong>Effective Date:</strong> 24-12-2025</div>
 
-    <p>ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application.</p>
+    <p>
+      ChatPlus provides an AI-powered productivity app. This Privacy Policy explains how information is processed and protected when you use the ChatPlus mobile application.
+    </p>
 
     <h2>No Account Required</h2>
-    <p>You can use ChatPlus without creating an account. We do not collect personal identifiers.</p>
+    <p>
+      You can use ChatPlus without creating an account. We do not collect personal identifiers.
+    </p>
 
     <h2>Information You Choose to Provide</h2>
     <ul>
@@ -136,8 +145,10 @@
 
     <h2>Contact</h2>
     <p>
-      <strong>Email:</strong> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br>
-      <strong>Website:</strong> <a href="https://yourdomain.com">https://yourdomain.com</a>
+      <strong>Email:</strong>
+      <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br>
+      <strong>Website:</strong>
+      <a href="https://yourdomain.com">https://yourdomain.com</a>
     </p>
 
   </div>
@@ -147,7 +158,7 @@
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 80;
+const COUNT = 120;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -160,10 +171,10 @@ for (let i = 0; i < COUNT; i++) {
   particles.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    r: Math.random() * 1.8 + 0.6,
-    vx: (Math.random() - 0.5) * 0.25,
-    vy: (Math.random() - 0.5) * 0.25,
-    o: Math.random() * 0.7 + 0.3
+    r: Math.random() * 1.9 + 0.6,
+    vx: (Math.random() - 0.5) * 0.3,
+    vy: (Math.random() - 0.5) * 0.3,
+    o: Math.random() * 0.9 + 0.4
   });
 }
 
