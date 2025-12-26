@@ -4,10 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
 <title>ChatPlus Support | Contact & Legal Information</title>
 
 <meta name="description" content="ChatPlus Support helps users get assistance with the ChatPlus AI-powered productivity app. Contact support, report issues, and access Privacy Policy and Terms of Service." />
@@ -19,7 +15,7 @@
 
 <style>
 /* ---------- GLOBAL ---------- */
-html, body {
+html {
   height: 100%;
 }
 
@@ -63,7 +59,6 @@ canvas {
 
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(4px);
-
   border-radius: 60px;
   border: 1px solid rgba(255,255,255,0.18);
 
@@ -105,7 +100,7 @@ a {
   text-decoration: underline;
 }
 
-/* ---------- GLASS BUTTON ---------- */
+/* ---------- GLASS LIQUID BUTTON ---------- */
 .support-btn {
   position: relative;
   margin: 36px auto 0;
@@ -132,7 +127,7 @@ a {
     inset 0 1px 1px rgba(255,255,255,0.4),
     0 10px 30px rgba(0,0,0,0.4);
 
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .support-btn::before {
@@ -153,8 +148,12 @@ a {
   transform: rotate(25deg) translateX(100%);
 }
 
+.support-btn:hover {
+  transform: translateY(-2px);
+}
+
 .support-btn:active {
-  transform: scale(0.96);
+  transform: scale(0.97);
 }
 
 /* ---------- SUPPORT FORM ---------- */
@@ -180,6 +179,7 @@ a {
   color: #ffffff;
   font-size: 15px;
   outline: none;
+  box-sizing: border-box;
 }
 
 .support-form input::placeholder,
@@ -199,16 +199,17 @@ a {
   cursor: pointer;
 }
 
-/* ---------- MOBILE ---------- */
+/* ---------- MOBILE FIX ---------- */
 @media (max-width: 768px) {
   body {
     align-items: flex-start;
-    padding: 80px 0;
+    padding: 20px 0;
   }
 
   .wrapper {
     margin: 0 15px;
     padding: 30px 20px;
+    max-height: none;
     border-radius: 40px;
   }
 
@@ -247,14 +248,13 @@ analyze content, generate ideas, and work more efficiently in one simple experie
 
 <h2>Legal Information</h2>
 <ul>
-  <li><a href="privacy.html">Privacy Policy</a></li>
-  <li><a href="terms.html">Terms of Service</a></li>
+  <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+  <li><a href="/terms-of-service.html">Terms of Service</a></li>
 </ul>
 
 </div>
 
 <script>
-/* ---------- SUPPORT BUTTON ---------- */
 const supportBtn = document.getElementById("supportBtn");
 const supportForm = document.getElementById("supportForm");
 
@@ -264,9 +264,9 @@ supportBtn.addEventListener("click", () => {
 });
 
 function sendSupportEmail() {
-  const name = userName.value;
-  const email = userEmail.value;
-  const message = userMessage.value;
+  const name = document.getElementById("userName").value;
+  const email = document.getElementById("userEmail").value;
+  const message = document.getElementById("userMessage").value;
 
   if (!name || !email || !message) {
     alert("Please fill in all fields.");
@@ -279,39 +279,9 @@ function sendSupportEmail() {
   );
 
   window.location.href =
-    `mailto:nexxen.app@gmail.com?subject=${subject}&body=${body}`;
+    `mailto:binibunnycoin@gmail.com?subject=${subject}&body=${body}`;
 }
+</script>
 
-/* ---------- PARTICLES ---------- */
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-let particles = [];
-const COUNT = 12;
-
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-window.addEventListener("resize", resize);
-resize();
-
-function init() {
-  particles = [];
-  for (let i = 0; i < COUNT; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 3 + 1.5,
-      vx: (Math.random() - 0.5) * 0.6,
-      vy: (Math.random() - 0.5) * 0.6
-    });
-  }
-}
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => {
-    p.x += p.vx;
-    p.y += p.vy;
-
-    if (p.x < 0 || p.x > canvas.wid
+</body>
+</html>
