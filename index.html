@@ -15,20 +15,27 @@
 
 <style>
 /* ---------- GLOBAL ---------- */
-html { scroll-behavior: smooth; }
+html, body {
+  height: 100%;
+}
 
 body {
   margin: 0;
-  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #ffffff;
+
   background:
     radial-gradient(1200px 700px at 30% 35%, rgba(255, 180, 90, 0.35), transparent 55%),
     radial-gradient(1000px 600px at 75% 25%, rgba(255, 90, 200, 0.35), transparent 60%),
     radial-gradient(800px 500px at 60% 80%, rgba(80, 140, 255, 0.35), transparent 65%),
     linear-gradient(180deg, #050409, #0E0B16, #1E1E1E);
-  overflow-y: auto;
+
+  overflow: hidden;
 }
 
 /* ---------- PARTICLES ---------- */
@@ -42,36 +49,112 @@ canvas {
 /* ---------- CONTENT WRAPPER ---------- */
 .wrapper {
   max-width: 960px;
-  margin: 80px auto;
+  width: 100%;
   padding: 64px;
+  text-align: center;
+
   background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(3%);
+  backdrop-filter: blur(4px);
   border-radius: 60px;
   border: 1px solid rgba(255,255,255,0.18);
+
   box-shadow:
     inset 0 0 40px rgba(255,255,255,0.08),
     0 60px 120px rgba(0,0,0,0.65);
-  overflow: hidden; /* keeps everything inside */
 }
 
 /* ---------- TYPOGRAPHY ---------- */
-h1 { font-size: 42px; font-weight: 700; margin-bottom: 16px; }
-h2 { font-size: 26px; font-weight: 700; margin-top: 48px; margin-bottom: 16px; }
-p, li { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.85); }
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
 
-a { color: #ffffff; text-decoration: underline; }
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
 
-/* ---------- SUPPORT BUTTON ---------- */
+p, li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ---------- GLASS LIQUID BUTTON ---------- */
 .support-btn {
-  margin-top: 30px;
-  padding: 14px 28px;
+  position: relative;
+  margin: 36px auto 0;
+  padding: 16px 44px;
+
   font-size: 16px;
-  border-radius: 40px;
-  border: none;
-  cursor: pointer;
-  background: #ffffff;
-  color: #000000;
   font-weight: 600;
+  color: #ffffff;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.35);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.08)
+  );
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  cursor: pointer;
+  overflow: hidden;
+
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,0.4),
+    0 10px 30px rgba(0,0,0,0.4);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Liquid shine */
+.support-btn::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.6),
+    transparent 70%
+  );
+  transform: rotate(25deg) translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+/* Hover */
+.support-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,0.5),
+    0 18px 45px rgba(0,0,0,0.6);
+}
+
+.support-btn:hover::before {
+  transform: rotate(25deg) translateX(100%);
+}
+
+/* Active press */
+.support-btn:active {
+  transform: scale(0.97);
 }
 
 /* ---------- SUPPORT FORM ---------- */
@@ -80,16 +163,14 @@ a { color: #ffffff; text-decoration: underline; }
   margin-top: 30px;
 }
 
-/* IMPORTANT FIXES */
 .support-form input,
 .support-form textarea {
   width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+  max-width: 520px;
+  margin: 0 auto 14px;
+  display: block;
 
-  margin-bottom: 14px;
   padding: 14px 16px;
-
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.25);
 
@@ -107,9 +188,11 @@ a { color: #ffffff; text-decoration: underline; }
 }
 
 .support-form button {
-  padding: 14px 28px;
-  border-radius: 40px;
+  margin-top: 10px;
+  padding: 14px 36px;
+  border-radius: 999px;
   border: none;
+
   background: #ffffff;
   color: #000000;
   font-weight: 600;
@@ -118,10 +201,17 @@ a { color: #ffffff; text-decoration: underline; }
 
 /* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding-top: 40px;
+    overflow-y: auto;
+  }
+
   .wrapper {
-    margin: 30px 15px;
+    margin: 0 15px;
     padding: 30px 20px;
   }
+
   h1 { font-size: 32px; }
   h2 { font-size: 22px; }
 }
@@ -137,7 +227,8 @@ a { color: #ffffff; text-decoration: underline; }
 <h1>ChatPlus Support</h1>
 
 <p>
-ChatPlus is an AI-powered productivity app designed to help users chat with AI, analyze content, generate ideas, and work more efficiently in one simple experience.
+ChatPlus is an AI-powered productivity app designed to help users chat with AI,
+analyze content, generate ideas, and work more efficiently in one simple experience.
 </p>
 
 <button id="supportBtn" class="support-btn">
@@ -163,7 +254,6 @@ ChatPlus is an AI-powered productivity app designed to help users chat with AI, 
 </div>
 
 <script>
-/* ---------- SUPPORT FORM LOGIC ---------- */
 const supportBtn = document.getElementById("supportBtn");
 const supportForm = document.getElementById("supportForm");
 
@@ -190,50 +280,6 @@ function sendSupportEmail() {
   window.location.href =
     `mailto:support@yourdomain.com?subject=${subject}&body=${body}`;
 }
-
-/* ---------- PARTICLES ---------- */
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-let particles = [];
-const COUNT = 10;
-
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-window.addEventListener("resize", resize);
-resize();
-
-function init() {
-  particles = [];
-  for (let i = 0; i < COUNT; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 3.5 + 1.9,
-      vx: (Math.random() - 0.5) * 0.6,
-      vy: (Math.random() - 0.5) * 0.6
-    });
-  }
-}
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => {
-    p.x += p.vx;
-    p.y += p.vy;
-    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-    ctx.beginPath();
-    ctx.fillStyle = "rgba(255,255,255,0.1)";
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fill();
-  });
-  requestAnimationFrame(animate);
-}
-
-init();
-animate();
 </script>
 
 </body>
