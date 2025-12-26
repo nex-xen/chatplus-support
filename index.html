@@ -284,7 +284,54 @@ function sendSupportEmail() {
   window.location.href =
     `mailto:nexxen.app@gmail.com?subject=${subject}&body=${body}`;
 }
-</script>
+   <script>
+/* ---------- PARTICLE SYSTEM (FASTER) ---------- */
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+let particles = [];
+const COUNT = 10;
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+function init() {
+  particles = [];
+  for (let i = 0; i < COUNT; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 3.5 + 1.9,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      o: Math.random() * 0.6 + 0.4
+    });
+  }
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+    ctx.beginPath();
+    ctx.fillStyle = `rgba(255, 255, 255, 0.1)`;
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+  requestAnimationFrame(animate);
+}
+
+init();
+animate();
+   <script>
 
 </body>
 </html>
