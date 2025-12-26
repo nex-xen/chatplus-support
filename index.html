@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 <title>ChatPlus Support | Contact & Legal Information</title>
 
@@ -18,7 +19,7 @@
 
 <style>
 /* ---------- GLOBAL ---------- */
-html {
+html, body {
   height: 100%;
 }
 
@@ -62,6 +63,7 @@ canvas {
 
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(4px);
+
   border-radius: 60px;
   border: 1px solid rgba(255,255,255,0.18);
 
@@ -103,7 +105,7 @@ a {
   text-decoration: underline;
 }
 
-/* ---------- GLASS LIQUID BUTTON ---------- */
+/* ---------- GLASS BUTTON ---------- */
 .support-btn {
   position: relative;
   margin: 36px auto 0;
@@ -130,7 +132,7 @@ a {
     inset 0 1px 1px rgba(255,255,255,0.4),
     0 10px 30px rgba(0,0,0,0.4);
 
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .support-btn::before {
@@ -151,12 +153,8 @@ a {
   transform: rotate(25deg) translateX(100%);
 }
 
-.support-btn:hover {
-  transform: translateY(-2px);
-}
-
 .support-btn:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
 
 /* ---------- SUPPORT FORM ---------- */
@@ -182,7 +180,6 @@ a {
   color: #ffffff;
   font-size: 15px;
   outline: none;
-  box-sizing: border-box;
 }
 
 .support-form input::placeholder,
@@ -202,17 +199,16 @@ a {
   cursor: pointer;
 }
 
-/* ---------- MOBILE FIX ---------- */
+/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   body {
     align-items: flex-start;
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   .wrapper {
     margin: 0 15px;
     padding: 30px 20px;
-    max-height: none;
     border-radius: 40px;
   }
 
@@ -251,13 +247,14 @@ analyze content, generate ideas, and work more efficiently in one simple experie
 
 <h2>Legal Information</h2>
 <ul>
-  <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-  <li><a href="/terms-of-service.html">Terms of Service</a></li>
+  <li><a href="privacy.html">Privacy Policy</a></li>
+  <li><a href="terms.html">Terms of Service</a></li>
 </ul>
 
 </div>
 
 <script>
+/* ---------- SUPPORT BUTTON ---------- */
 const supportBtn = document.getElementById("supportBtn");
 const supportForm = document.getElementById("supportForm");
 
@@ -267,9 +264,9 @@ supportBtn.addEventListener("click", () => {
 });
 
 function sendSupportEmail() {
-  const name = document.getElementById("userName").value;
-  const email = document.getElementById("userEmail").value;
-  const message = document.getElementById("userMessage").value;
+  const name = userName.value;
+  const email = userEmail.value;
+  const message = userMessage.value;
 
   if (!name || !email || !message) {
     alert("Please fill in all fields.");
@@ -285,12 +282,11 @@ function sendSupportEmail() {
     `mailto:nexxen.app@gmail.com?subject=${subject}&body=${body}`;
 }
 
-<script>
-/* ---------- PARTICLE SYSTEM (FASTER) ---------- */
+/* ---------- PARTICLES ---------- */
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 10;
+const COUNT = 12;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -305,10 +301,9 @@ function init() {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 3.5 + 1.9,
+      r: Math.random() * 3 + 1.5,
       vx: (Math.random() - 0.5) * 0.6,
-      vy: (Math.random() - 0.5) * 0.6,
-      o: Math.random() * 0.6 + 0.4
+      vy: (Math.random() - 0.5) * 0.6
     });
   }
 }
@@ -319,21 +314,4 @@ function animate() {
     p.x += p.vx;
     p.y += p.vy;
 
-    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-    ctx.beginPath();
-    ctx.fillStyle = `rgba(255, 255, 255, 0.1)`;
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fill();
-  });
-  requestAnimationFrame(animate);
-}
-
-init();
-animate();
-<script>
-      
-
-</body>
-</html>
+    if (p.x < 0 || p.x > canvas.wid
