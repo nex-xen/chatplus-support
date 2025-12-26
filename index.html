@@ -7,7 +7,6 @@
 <title>ChatPlus Support | Contact & Legal Information</title>
 
 <meta name="description" content="ChatPlus Support helps users get assistance with the ChatPlus AI-powered productivity app. Contact support, report issues, and access Privacy Policy and Terms of Service." />
-
 <meta name="robots" content="index, follow" />
 
 <meta property="og:title" content="ChatPlus Support" />
@@ -16,9 +15,7 @@
 
 <style>
 /* ---------- GLOBAL ---------- */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -49,43 +46,58 @@ canvas {
   padding: 64px;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(3%);
-  -webkit-backdrop-filter: blur(3%);
   border-radius: 60px;
   border: 1px solid rgba(255,255,255,0.18);
   box-shadow:
     inset 0 0 40px rgba(255,255,255,0.08),
     0 60px 120px rgba(0,0,0,0.65);
-  position: relative;
 }
 
 /* ---------- TYPOGRAPHY ---------- */
-h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 16px;
+h1 { font-size: 42px; font-weight: 700; margin-bottom: 16px; }
+h2 { font-size: 26px; font-weight: 700; margin-top: 48px; margin-bottom: 16px; }
+p, li { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.85); }
+
+a { color: #ffffff; text-decoration: underline; }
+
+/* ---------- SUPPORT BUTTON ---------- */
+.support-btn {
+  margin-top: 30px;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 600;
 }
 
-h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 48px;
-  margin-bottom: 16px;
+/* ---------- SUPPORT FORM ---------- */
+.support-form {
+  display: none;
+  margin-top: 30px;
 }
 
-p, li {
-  font-size: 17px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.85);
+.support-form input,
+.support-form textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  outline: none;
 }
 
-ul {
-  margin: 0 0 18px 18px;
-  padding: 0;
-}
-
-a {
-  color: #ffffff;
-  text-decoration: underline;
+.support-form button {
+  padding: 14px 28px;
+  border-radius: 40px;
+  border: none;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 /* ---------- MOBILE ---------- */
@@ -93,9 +105,7 @@ a {
   .wrapper {
     margin: 30px 15px;
     padding: 30px 20px;
-    border-radius: 60px;
   }
-
   h1 { font-size: 32px; }
   h2 { font-size: 22px; }
 }
@@ -114,15 +124,19 @@ a {
 ChatPlus is an AI-powered productivity app designed to help users chat with AI, analyze content, generate ideas, and work more efficiently in one simple experience.
 </p>
 
-<h2>Contact Support</h2>
-<p>
-If you need assistance, have questions, or want to report an issue, please contact our support team:
-</p>
+<button id="supportBtn" class="support-btn">
+  Contact Support
+</button>
 
-<p>
-<strong>Email:</strong>
-<a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
-</p>
+<div id="supportForm" class="support-form">
+  <h2>Contact Support</h2>
+
+  <input type="text" id="userName" placeholder="Your Name" required />
+  <input type="email" id="userEmail" placeholder="Your Email" required />
+  <textarea id="userMessage" placeholder="Your Message" rows="5" required></textarea>
+
+  <button onclick="sendSupportEmail()">Send Message</button>
+</div>
 
 <h2>Legal Information</h2>
 <ul>
@@ -133,6 +147,35 @@ If you need assistance, have questions, or want to report an issue, please conta
 </div>
 
 <script>
+/* ---------- SUPPORT FORM LOGIC ---------- */
+const supportBtn = document.getElementById("supportBtn");
+const supportForm = document.getElementById("supportForm");
+
+supportBtn.addEventListener("click", () => {
+  supportForm.style.display = "block";
+  supportBtn.style.display = "none";
+});
+
+function sendSupportEmail() {
+  const name = document.getElementById("userName").value;
+  const email = document.getElementById("userEmail").value;
+  const message = document.getElementById("userMessage").value;
+
+  if (!name || !email || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  const subject = encodeURIComponent("ChatPlus Support Request");
+  const body = encodeURIComponent(
+    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+  );
+
+  window.location.href =
+    `mailto:support@yourdomain.com?subject=${subject}&body=${body}`;
+}
+
+/* ---------- PARTICLES ---------- */
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
