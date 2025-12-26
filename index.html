@@ -3,99 +3,102 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ChatPlus Support</title>
+
+<title>ChatPlus Support | Contact & Legal Information</title>
+
+<meta name="description" content="ChatPlus Support helps users get assistance with the ChatPlus AI-powered productivity app. Contact support, report issues, and access Privacy Policy and Terms of Service." />
+
+<meta name="robots" content="index, follow" />
+
+<meta property="og:title" content="ChatPlus Support" />
+<meta property="og:description" content="Get help with ChatPlus. Contact support, ask questions, report issues, and access legal information including Privacy Policy and Terms of Service." />
+<meta property="og:type" content="website" />
 
 <style>
-  body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-      "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #ffffff;
-    background:
-      radial-gradient(1200px 700px at 30% 35%, rgba(255, 180, 90, 0.35), transparent 55%),
-      radial-gradient(1000px 600px at 75% 25%, rgba(255, 90, 200, 0.35), transparent 60%),
-      radial-gradient(800px 500px at 60% 80%, rgba(80, 140, 255, 0.35), transparent 65%),
-      linear-gradient(180deg, #050409, #0E0B16, #1E1E1E);
-  }
+/* ---------- GLOBAL ---------- */
+html {
+  scroll-behavior: smooth;
+}
 
-  canvas {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  background:
+    radial-gradient(1200px 700px at 30% 35%, rgba(255, 180, 90, 0.35), transparent 55%),
+    radial-gradient(1000px 600px at 75% 25%, rgba(255, 90, 200, 0.35), transparent 60%),
+    radial-gradient(800px 500px at 60% 80%, rgba(80, 140, 255, 0.35), transparent 65%),
+    linear-gradient(180deg, #050409, #0E0B16, #1E1E1E);
+  overflow-y: auto;
+}
 
+/* ---------- PARTICLES ---------- */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------- CONTENT WRAPPER ---------- */
+.wrapper {
+  max-width: 960px;
+  margin: 80px auto;
+  padding: 64px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(3%);
+  -webkit-backdrop-filter: blur(3%);
+  border-radius: 60px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow:
+    inset 0 0 40px rgba(255,255,255,0.08),
+    0 60px 120px rgba(0,0,0,0.65);
+  position: relative;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+p, li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+}
+
+ul {
+  margin: 0 0 18px 18px;
+  padding: 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
   .wrapper {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 56px;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border-radius: 28px;
-    box-shadow: 0 40px 90px rgba(0,0,0,0.6);
+    margin: 30px 15px;
+    padding: 30px 20px;
+    border-radius: 60px;
   }
 
-  h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #ffffff;
-  }
-
-  h2 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 48px;
-    margin-bottom: 16px;
-    color: #ffffff;
-  }
-
-  p {
-    font-size: 17px;
-    line-height: 1.7;
-    margin: 0 0 18px;
-    color: rgba(255,255,255,0.8);
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 18px;
-  }
-
-  li {
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 10px;
-    color: rgba(255,255,255,0.8);
-  }
-
-  a {
-    color: #ffffff;
-    text-decoration: underline;
-  }
-
-  a:hover {
-    opacity: 0.9;
-  }
-
-  @media (max-width: 768px) {
-    .wrapper {
-      margin: 40px 16px;
-      padding: 36px 24px;
-    }
-
-    h1 {
-      font-size: 32px;
-    }
-
-    h2 {
-      font-size: 22px;
-    }
-  }
+  h1 { font-size: 32px; }
+  h2 { font-size: 22px; }
+}
 </style>
 </head>
 
@@ -108,14 +111,14 @@
 <h1>ChatPlus Support</h1>
 
 <p>
-ChatPlus is an AI-powered productivity app designed to help users chat with AI,
-analyze content, generate ideas, and work more efficiently in one simple experience.
+ChatPlus is an AI-powered productivity app designed to help users chat with AI, analyze content, generate ideas, and work more efficiently in one simple experience.
 </p>
 
 <h2>Contact Support</h2>
 <p>
 If you need assistance, have questions, or want to report an issue, please contact our support team:
 </p>
+
 <p>
 <strong>Email:</strong>
 <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
@@ -123,12 +126,8 @@ If you need assistance, have questions, or want to report an issue, please conta
 
 <h2>Legal Information</h2>
 <ul>
-  <li>
-    <a href="https://YOUR-PRIVACY-URL">Privacy Policy</a>
-  </li>
-  <li>
-    <a href="https://YOUR-TERMS-URL">Terms of Service</a>
-  </li>
+  <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+  <li><a href="/terms-of-service.html">Terms of Service</a></li>
 </ul>
 
 </div>
@@ -137,7 +136,7 @@ If you need assistance, have questions, or want to report an issue, please conta
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 80;
+const COUNT = 10;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -152,10 +151,9 @@ function init() {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 1.8 + 0.6,
-      vx: (Math.random() - 0.5) * 0.25,
-      vy: (Math.random() - 0.5) * 0.25,
-      o: Math.random() * 0.7 + 0.3
+      r: Math.random() * 3.5 + 1.9,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6
     });
   }
 }
@@ -168,7 +166,7 @@ function animate() {
     if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
     if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
     ctx.beginPath();
-    ctx.fillStyle = `rgba(255,255,255,${p.o})`;
+    ctx.fillStyle = "rgba(255,255,255,0.1)";
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
     ctx.fill();
   });
