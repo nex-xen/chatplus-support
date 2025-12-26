@@ -6,14 +6,13 @@
 <title>ChatPlus Terms of Service</title>
 
 <style>
-  :root {
-    --dark: #1E1E1E;
-    --blue: #1E71FF;
-    --purple: #F718FF;
-  }
+/* ---------- GLOBAL ---------- */
+html {
+  scroll-behavior: smooth;
+}
 
-  body {
-    margin: 0;
+body {
+  margin: 0;
     min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
       "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -23,104 +22,85 @@
       radial-gradient(1000px 600px at 75% 25%, rgba(255, 90, 200, 0.35), transparent 60%),
       radial-gradient(800px 500px at 60% 80%, rgba(80, 140, 255, 0.35), transparent 65%),
       linear-gradient(180deg, #050409, #0E0B16, #1E1E1E);
+    overflow-y: auto;
   }
 
-  canvas {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
+/* ---------- PARTICLES ---------- */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
 
+/* ---------- CONTENT WRAPPER ---------- */
+.wrapper {
+  max-width: 960px;
+  margin: 80px auto;
+  padding: 64px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(3%);
+  -webkit-backdrop-filter: blur(3%);
+  border-radius: 60px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow:
+    inset 0 0 40px rgba(255,255,255,0.08),
+    0 60px 120px rgba(0,0,0,0.65);
+  position: relative;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.date {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+p, li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+}
+
+ul {
+  margin: 0 0 18px 18px;
+  padding: 0;
+}
+
+strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
   .wrapper {
-    position: relative;
-    z-index: 1;
-    max-width: 960px;
-    margin: 80px auto;
-    padding: 56px;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 48px;
-    box-shadow: 0 40px 90px rgba(0,0,0,0.6);
+    margin: 30px 15px;
+    padding: 30px 20px;
+    border-radius: 60px;
   }
 
-  h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #ffffff;
-  }
-
-  .date {
-    font-size: 14px;
-    opacity: 0.8;
-    margin-bottom: 40px;
-  }
-
-  h2 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 48px;
-    margin-bottom: 16px;
-    color: #ffffff;
-  }
-
-  h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 32px;
-    margin-bottom: 12px;
-    color: #ffffff;
-  }
-
-  p {
-    font-size: 17px;
-    line-height: 1.7;
-    margin: 0 0 18px;
-    color: rgba(255,255,255,0.8);
-  }
-
-  ul {
-    margin: 0 0 18px 18px;
-    padding: 0;
-  }
-
-  li {
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 8px;
-    color: rgba(255,255,255,0.8);
-  }
-
-  strong {
-    font-weight: 600;
-    color: #ffffff;
-  }
-
-  a {
-    color: #ffffff;
-    text-decoration: underline;
-  }
-
-  a:hover {
-    opacity: 0.9;
-  }
-
-  @media (max-width: 768px) {
-    .wrapper {
-      margin: 40px 16px;
-      padding: 36px 24px;
-    }
-
-    h1 {
-      font-size: 32px;
-    }
-
-    h2 {
-      font-size: 22px;
-    }
-  }
+  h1 { font-size: 32px; }
+  h2 { font-size: 22px; }
+}
 </style>
 </head>
 
@@ -134,12 +114,16 @@
 <div class="date"><strong>Effective Date:</strong> 24-12-2025</div>
 
 <p>
-These Terms of Service govern your access to and use of the ChatPlus mobile application, operated by ChatPlus. By downloading, accessing, or using the App, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the App.
+These Terms of Service govern your access to and use of the ChatPlus mobile application, operated by ChatPlus.
+By downloading, accessing, or using the App, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the App.
 </p>
 
 <h2>Description of the Service</h2>
 <p>
-ChatPlus is an AI-powered productivity application that allows users to interact with artificial intelligence through chat and related features, including text-based interactions, document and image analysis, voice input, and content generation. ChatPlus does not require users to create an account to access core features.
+ChatPlus is an AI-powered productivity application that allows users to interact with artificial intelligence through chat and related features, including text-based interactions, document and image analysis, voice input, and content generation.
+</p>
+<p>
+ChatPlus does not require users to create an account to access core features.
 </p>
 
 <h2>Eligibility</h2>
@@ -149,10 +133,10 @@ You must be at least 13 years old to use the App. By using ChatPlus, you represe
 
 <h2>Use of the App</h2>
 <p>
-You agree to use ChatPlus only for lawful purposes and in accordance with these Terms. You agree not to:
+You agree to use ChatPlus only for lawful purposes and in accordance with these Terms.
 </p>
 <ul>
-  <li>Use the App for illegal, harmful, or abusive activities, or make decisions that could result in physical, financial, or legal harm based on AI outputs</li>
+  <li>Use the App for illegal, harmful, or abusive activities, or to make decisions that could result in physical, financial, or legal harm based on AI outputs</li>
   <li>Attempt to interfere with or disrupt the App or its infrastructure</li>
   <li>Reverse engineer, copy, or exploit any part of the App</li>
   <li>Use the App in a way that violates applicable laws or regulations</li>
@@ -162,60 +146,78 @@ ChatPlus reserves the right to restrict or suspend access if misuse is detected.
 </p>
 
 <h2>User Content</h2>
-
-<h3>Your Content</h3>
+<p><strong>Your Content</strong></p>
 <p>
-You may submit text, images, documents, voice input, or other content when using the App. You retain ownership of your User Content. By submitting User Content, you grant ChatPlus a limited, non-exclusive license to process that content solely for the purpose of providing App functionality. ChatPlus does not claim ownership over your User Content.
+You may submit text, images, documents, voice input, or other content (“User Content”) when using the App.
+You retain ownership of your User Content.
+</p>
+<p>
+By submitting User Content, you grant ChatPlus a limited, non-exclusive license to process that content solely for the purpose of providing App functionality, such as generating responses or analyzing content at your request.
+ChatPlus does not claim ownership over your User Content.
 </p>
 
-<h3>AI-Generated Content</h3>
+<h2>AI-Generated Content</h2>
+<ul>
+  <li>Be inaccurate, incomplete, or outdated</li>
+  <li>Contain errors or unintended results</li>
+</ul>
 <p>
-Responses generated by the App are produced by artificial intelligence systems and may be inaccurate, incomplete, or outdated. ChatPlus does not guarantee the accuracy or reliability of AI-generated content. The App is not a substitute for professional advice, including legal, medical, or financial guidance.
+ChatPlus does not guarantee the accuracy, completeness, or reliability of AI-generated content. Users are responsible for any decisions or actions taken based on the AI outputs. The App is not a substitute for professional advice, including legal, medical, or financial guidance.
 </p>
 
 <h2>Third-Party Services</h2>
 <p>
-ChatPlus relies on third-party service providers to deliver certain AI features. These providers process data only to generate responses and provide requested functionality. ChatPlus does not control their data retention policies. Users are encouraged to review the privacy policies of these providers.
+ChatPlus relies on third-party service providers to deliver certain AI features. These providers process data only to generate responses and provide requested functionality.
+While we ensure providers are reputable and adhere to security practices, ChatPlus does not control their data retention policies.
 </p>
 
 <h2>Subscriptions and Payments</h2>
 <p>
-Some features require a paid subscription. All purchases are processed by Apple through the App Store. ChatPlus does not store payment information. Subscriptions renew automatically unless canceled at least 24 hours before the end of the billing period. Subscription management is handled through your Apple ID settings.
+Some features of ChatPlus require a paid subscription.
+All purchases and subscriptions are processed by Apple through the App Store.
+ChatPlus does not process or store payment information.
+</p>
+<p>
+Subscriptions renew automatically unless canceled at least 24 hours before the end of the current billing period. Subscription management is handled through your Apple ID.
 </p>
 
 <h2>Push Notifications</h2>
 <p>
-ChatPlus may send push notifications related to app functionality, service updates, or subscription status, only if you provide system-level consent. You may disable notifications at any time through your device settings.
+ChatPlus may send push notifications related to app functionality, service updates, or subscription status only with your system-level consent. You may disable notifications at any time.
 </p>
 
 <h2>Intellectual Property</h2>
 <p>
-All rights, title, and interest in the App, including its software and branding, are owned by ChatPlus or its licensors. You may not copy, modify, distribute, or create derivative works without prior written permission.
+All rights, title, and interest in the App, including its design, software, and branding, are owned by ChatPlus or its licensors.
+You may not copy, modify, distribute, or create derivative works without prior written permission.
 </p>
 
 <h2>Availability and Changes</h2>
 <p>
-ChatPlus may modify, suspend, or discontinue any part of the App at any time. Continued use of the App after changes indicates acceptance of the revised Terms.
+ChatPlus may modify, suspend, or discontinue any part of the App at any time.
+Continued use of the App after changes indicates acceptance of updated Terms.
 </p>
 
 <h2>Disclaimer of Warranties</h2>
 <p>
-The App is provided on an “as is” and “as available” basis. ChatPlus disclaims all warranties, whether express or implied.
+The App is provided on an “as is” and “as available” basis.
+ChatPlus disclaims all warranties, express or implied.
 </p>
 
 <h2>Limitation of Liability</h2>
 <p>
-To the maximum extent permitted by law, ChatPlus shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App.
+To the maximum extent permitted by law, ChatPlus shall not be liable for any indirect, incidental, or consequential damages arising from use of the App.
 </p>
 
 <h2>Termination</h2>
 <p>
-You may stop using the App at any time by uninstalling it. ChatPlus may restrict or terminate access if these Terms are violated.
+You may stop using the App at any time by uninstalling it.
+ChatPlus may terminate access if these Terms are violated.
 </p>
 
 <h2>Governing Law</h2>
 <p>
-These Terms are governed by and construed in accordance with the laws of the applicable jurisdiction.
+These Terms are governed by the laws of the applicable jurisdiction, without regard to conflict of law principles.
 </p>
 
 <h2>Contact Information</h2>
@@ -230,7 +232,7 @@ These Terms are governed by and construed in accordance with the laws of the app
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particles = [];
-const COUNT = 25;
+const COUNT = 10;
 
 function resize() {
   canvas.width = window.innerWidth;
@@ -245,10 +247,9 @@ function init() {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 4.8 + 2.6,
-      vx: (Math.random() - 0.5) * 0.25,
-      vy: (Math.random() - 0.5) * 0.25,
-      o: Math.random() * 0.7 + 0.3
+      r: Math.random() * 3.5 + 1.9,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6
     });
   }
 }
@@ -261,7 +262,7 @@ function animate() {
     if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
     if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
     ctx.beginPath();
-    ctx.fillStyle = `rgba(255,255,255,${p.o})`;
+    ctx.fillStyle = "rgba(255,255,255,0.1)";
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
     ctx.fill();
   });
